@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iVenth | Trusted iPhone Recommendation</title>
+
+<style>
+:root{
+    --dark:#0f172a;
+    --dark-soft:#111827;
+    --gold:#fbbf24;
+    --grey:#9ca3af;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    background:var(--dark);
+    color:#fff;
+}
+
+/* BANNER */
+.banner{position:relative}
+.banner img{width:100%;height:300px;object-fit:cover}
+.banner-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(rgba(15,23,42,.6),rgba(15,23,42,.9));
+    display:flex;flex-direction:column;
+    justify-content:center;align-items:center;text-align:center;
+}
+.banner-overlay h1{font-size:46px;letter-spacing:2px}
+.banner-overlay span{color:var(--gold)}
+.banner-overlay p{margin-top:14px;color:#e5e7eb;max-width:800px}
+
+/* FILTER */
+.filter{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    padding:40px 20px;
+    background:var(--dark-soft);
+}
+.filter button{
+    padding:10px 26px;
+    border-radius:30px;
+    background:transparent;
+    border:1px solid rgba(255,255,255,.2);
+    color:#e5e7eb;
+    cursor:pointer;
+    font-weight:600;
+}
+.filter button.active{
+    background:var(--gold);
+    color:#111;
+}
+
+/* CATALOG */
+.catalog{
+    padding:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:36px;
+}
+
+/* CARD */
+.card{
+    background:var(--dark-soft);
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.05);
+    transition:.35s;
+}
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+}
+.card img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.card-body{padding:24px}
+.card-body h3{font-size:20px}
+
+.price{margin:12px 0;font-size:20px;font-weight:bold;color:var(--gold)}
+
+.desc{
+    font-size:13px;
+    line-height:1.7;
+    color:#d1d5db;
+}
+
+.variant{
+    margin-top:12px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+.variant button{
+    padding:6px 14px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.15);
+    background:transparent;
+    color:#e5e7eb;
+    cursor:pointer;
+    font-size:13px;
+}
+.variant button.active{
+    background:var(--gold);
+    color:#111;
+    font-weight:700;
+}
+.variant button.sold{
+    opacity:.4;
+    cursor:not-allowed;
+    text-decoration:line-through;
+}
+
+.btn{
+    display:block;
+    margin-top:18px;
+    padding:13px;
+    text-align:center;
+    background:var(--gold);
+    color:#111;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:700;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    font-size:14px;
+    color:var(--grey);
+    background:var(--dark-soft);
+}
+
+@media(max-width:768px){
+    .catalog{padding:30px}
+    .banner img{height:220px}
+}
+</style>
+</head>
+
+<body>
+
+<section class="banner">
+<img src="images/banner1.jpg">
+<div class="banner-overlay">
+    <h1>i<span>V</span>enth</h1>
+    <p>Pusat rekomendasi iPhone terpercaya berdasarkan kategori.</p>
+</div>
+</section>
+
+<div class="filter">
+    <button class="active" onclick="filterCat('bypass',this)">Bypass</button>
+    <button onclick="filterCat('simlock',this)">Simlock</button>
+    
+</div>
+
+<section class="catalog">
+
+<!-- IPHONE 15 -->
+<div class="card" data-category="bypass">
+<img src="images/iphone15.jpeg">
+<div class="card-body">
+<h3>iPhone 15</h3>
+<div class="price" id="p15">Rp 3.500.000</div>
+<div class="desc">
+iPhone bypass, jangan reset dan jangan update.<br>
+Rata-rata part sudah pergantian, namun menggunakan part bagus / OLED.
+</div>
+<div class="variant">
+<button class="active" onclick="setPrice('p15','3.500.000',this)">128GB</button>
+<button onclick="setPrice('p15','3.900.000',this)">256GB</button>
+<button onclick="setPrice('p15','4.200.000',this)">512GB</button>
+</div>
+<a class="btn" href="https://s.shopee.co.id/9Uv8kLSzoh" target="_blank">Buy on Shopee</a>
+</div>
+</div>
+
+<!-- IPHONE 13 -->
+<div class="card" data-category="bypass">
+<img src="images/iphone13.jpeg">
+<div class="card-body">
+<h3>iPhone 13</h3>
+<div class="price" id="p13">Rp 2.600.000</div>
+<div class="desc">iPhone bypass, jangan reset dan jangan update.<br>Part bagus / OLED.</div>
+<div class="variant">
+<button class="active" onclick="setPrice('p13','2.600.000',this)">128GB</button>
+<button onclick="setPrice('p13','3.000.000',this)">256GB</button>
+<button onclick="setPrice('p13','4.200.000',this)">512GB</button>
+</div>
+<a class="btn" href="https://s.shopee.co.id/6fb9Djo06k" target="_blank">Buy on Shopee</a>
+</div>
+</div>
+
+<!-- IPHONE 14 PRO -->
+<div class="card" data-category="bypass">
+<img src="images/iphone14pro.png">
+<div class="card-body">
+<h3>iPhone 14 Pro</h3>
+<div class="price" id="p14pro">Rp 3.800.000</div>
+<div class="desc">iPhone bypass, jangan reset dan jangan update.<br>Part bagus / OLED.</div>
+<div class="variant">
+<button class="active" onclick="setPrice('p14pro','3.800.000',this)">128GB</button>
+<button onclick="setPrice('p14pro','4.100.000',this)">256GB</button>
+<button onclick="setPrice('p14pro','4.300.000',this)">512GB</button>
+</div>
+<a class="btn" href="https://s.shopee.co.id/5fiXSFd1R5" target="_blank">Buy on Shopee</a>
+</div>
+</div>
+
+<!-- IPHONE 11 -->
+<div class="card" data-category="bypass">
+<img src="images/iphone11.png">
+<div class="card-body">
+<h3>iPhone 11</h3>
+<div class="price" id="p11">Rp 1.800.000</div>
+<div class="desc">iPhone bypass, jangan reset dan jangan update.<br>Part bagus / OLED.</div>
+<div class="variant">
+<button class="active" onclick="setPrice('p11','1.800.000',this)">64GB</button>
+<button onclick="setPrice('p11','2.120.000',this)">128GB</button>
+</div>
+<a class="btn" href="https://s.shopee.co.id/6fbCsdQoin" target="_blank">Buy on Shopee</a>
+</div>
+</div>
+
+<!-- IPHONE 14 -->
+<div class="card" data-category="bypass">
+<img src="images/iphone14.png">
+<div class="card-body">
+<h3>iPhone 14</h3>
+<div class="price" id="p14">Rp 3.200.000</div>
+<div class="desc">iPhone bypass, jangan reset dan jangan update.<br>Part bagus / OLED.</div>
+<div class="variant">
+<button class="active" onclick="setPrice('p14','3.200.000',this)">128GB</button>
+<button onclick="setPrice('p14','3.450.000',this)">256GB</button>
+<button onclick="setPrice('p14','3.850.000',this)">512GB</button>
+</div>
+<a class="btn" href="https://s.shopee.co.id/50SjOLd3NA" target="_blank">Buy on Shopee</a>
+</div>
+</div>
+
+<!-- IPHONE 13 PRO & PRO MAX -->
+<div class="card" data-category="bypass">
+<img src="images/iphone13pro.jpeg">
+<div class="card-body">
+<h3>iPhone 13 Pro</h3>
+<div class="price" id="p13pro">Rp 3.500.000</div>
+<div class="variant">
+<button class="active" onclick="setPrice('p13pro','3.500.000',this)">128GB</button>
+<button onclick="setPrice('p13pro','3.900.000',this)">256GB</button>
+<button class="sold">512GB</button>
+</div>
+
+<h3 style="margin-top:12px">iPhone 13 Pro Max</h3>
+<div class="price" id="p13pm">Rp 3.800.000</div>
+<div class="variant">
+<button class="active" onclick="setPrice('p13pm','3.800.000',this)">128GB</button>
+<button onclick="setPrice('p13pm','4.000.000',this)">256GB</button>
+<button class="sold">512GB</button>
+</div>
+
+<a class="btn" href="https://s.shopee.co.id/3LKVPJDzyV" target="_blank">Buy on Shopee</a>
+</div>
+</div>
+
+<!-- IPHONE 14 PLUS -->
+<div class="card" data-category="bypass">
+<img src="images/iphone14plus.jpeg">
+<div class="card-body">
+<h3>iPhone 14 Plus</h3>
+<div class="price" id="p14plus">Rp 3.400.000</div>
+<div class="desc">iPhone bypass, jangan reset dan jangan update.<br>Part bagus / OLED.</div>
+<div class="variant">
+<button class="active" onclick="setPrice('p14plus','3.400.000',this)">128GB</button>
+<button class="sold">256GB</button>
+<button class="sold">512GB</button>
+</div>
+<a class="btn" href="https://s.shopee.co.id/5L5pIn3cRH" target="_blank">Buy on Shopee</a>
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2026 iVenth — Trusted iPhone Recommendation
+</footer>
+
+<script>
+function setPrice(id,price,el){
+    document.getElementById(id).innerHTML="Rp "+price;
+    el.parentElement.querySelectorAll("button").forEach(b=>b.classList.remove("active"));
+    el.classList.add("active");
+}
+function filterCat(cat,btn){
+    document.querySelectorAll('.filter button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.card').forEach(card=>{
+        card.style.display = (card.dataset.category===cat) ? 'block' : 'none';
+    });
+}
+</script>
+
+</body>
+</html>
