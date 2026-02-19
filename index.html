@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iVenth Store</title>
+ <link rel="icon" type="image/png" href="assets/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+<div class="brand">i<span>V</span>enth</div>
+
+<div class="hamburger" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+<a href="#info">Informasi Lengkap</a>
+<a href="https://wa.me/6281217373971" target="_blank">
+Kontak WhatsApp
+</a>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Announcement -->
+<section class="announcement">
+Untuk keamanan barang wajib video unboxing lengkap awal sampe akhir sampai iphone menyala untuk keamanan
+</section>
+
+<!-- Categories -->
+<section class="categories">
+<button class="active" onclick="filterCategory('bypass', this)">Bypass</button>
+<button onclick="filterCategory('resmi', this)">Resmi / iBox</button>
+<button onclick="filterCategory('interfu', this)">Inter FU</button>
+<button onclick="filterCategory('simlock', this)">Inter Simlock</button>
+</section>
+<section class="resmi-highlight" id="resmiHighlight">
+  <div class="resmi-box">
+    <h2>Kunjungi Website Resmi</h2>
+    
+    <p>
+      Dapatkan potongan langsung 
+      <span class="big-discount">250K</span> 
+      dengan kode voucher
+    </p>
+
+    <div class="voucher-box">
+      KITARXJAVENTH
+    </div>
+
+    <a href="https://kitar.id" target="_blank" class="resmi-btn">
+      Kunjungi Sekarang
+    </a>
+  </div>
+</section>
+
+<!-- Products -->
+<main class="grid" id="productGrid"></main>
+<!-- Section Resmi Highlight -->
+
+
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
