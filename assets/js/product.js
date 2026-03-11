@@ -564,7 +564,7 @@ variants:{
 "256GB":3450000,
 "512GB":3850000
 },
-link:"https://s.shopee.co.id/50SjOLd3NA"
+link:"https://s.shopee.co.id/BOzFyrA2S"
 },
 
 /* ================= IPHONE 13 PRO & PRO MAX ================= */
@@ -670,3 +670,4 @@ document.getElementById("price").innerText=
 variantBox.appendChild(btn);
 });
 }
+
