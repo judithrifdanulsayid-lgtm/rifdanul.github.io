@@ -502,7 +502,7 @@ variants:{
 "256GB":3000000,
 "512GB":4200000
 },
-link:"https://s.shopee.co.id/6fb9Djo06k"
+link:"https://s.shopee.co.id/5L7RGZpqMt"
 },
 
 /* ================= IPHONE 14 PRO ================= */
