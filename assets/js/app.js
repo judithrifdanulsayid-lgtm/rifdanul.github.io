@@ -74,7 +74,7 @@ const products = [
 
 
 /* ================= SIMLOCK ================= */
-
+{id:"iphone16",name:"Iphone 16",img:"https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-1.jpg?v=1734067695&width=1680",category:"simlock",prices:[8000000]},
 ];
 
 function renderProducts(category){
