@@ -26,8 +26,30 @@ header.classList.remove("shrink");
 
 /* ===== PRODUCT DATA (PASTE DATA KAMU DI SINI — TETAP SAMA) ===== */
 const products = {/* ================= IPHONE 15 ================= */
-
-
+/* ================= SIMLOCK ================= */
+iphone16:{
+category:"simlock",
+title:"iPhone 16",
+description:`- Unit Inter
+- Garansi toko 1 bulan 
+- Tidak ada riwayat servis
+- 3utoools hijau 
+- BH di atas 90
+`,
+images:[
+"https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-1.jpg?v=1734067695&width=823",
+"https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-3.jpg?v=1734067695&width=1680",
+"https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-4.jpg?v=1734067695&width=1680",
+"https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-5.jpg?v=1734067695&width=1680",
+"https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-6.jpg?v=1734067695&width=1680",
+"assets/css/free.png"
+],
+variants:{
+"128GB ":8700000,
+"256GB ":9200000
+},
+link:"https://s.shopee.co.id/4fro7fzglq"
+},
 /* ================= RESMI ================= */
 
 /* ================= 1 ================= */
