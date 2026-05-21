@@ -124,7 +124,7 @@ const products = [
 {
   name:"iPhone 16 Plus",
   category:"Inter No Simlock",
-  price:"Rp 9 Jutaan",
+  price:"Rp 8 Jutaan",
   badge:"Latest",
   description:"Inter all op, BH 90-100 bisa request, LCD & baterai ori tanpa notif dan bukan simlock.",
   links:[
@@ -138,8 +138,7 @@ const products = [
     "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-3.jpg?v=1734067695&width=1680",
     "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-4.jpg?v=1734067695&width=1680",
     "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-5.jpg?v=1734067695&width=1680",
-    "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-6.jpg?v=1734067695&width=1680",
-    "assets/css/free.png"
+    "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-6.jpg?v=1734067695&width=1680"
   ]
 },
 ];
