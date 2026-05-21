@@ -1,0 +1,119 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iVenth Official</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+
+<a 
+  href="https://wa.me/6281217373971" 
+  class="floating-wa"
+  target="_blank"
+>
+  <img 
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    alt="WhatsApp"
+  >
+
+  <div class="wa-text">
+    <span>Chat Admin</span>
+    <small>iVenth Official</small>
+  </div>
+</a>
+<body>
+
+  <!-- POPUP -->
+  <div class="popup" id="popup">
+    <div class="popup-box">
+
+      <h2>⚠ Buka di Browser Dulu</h2>
+
+      <p>
+        Agar tampilan lebih smooth & interaktif :
+        <br><br>
+        Klik titik tiga → pilih <b>Buka di Browser</b>
+      </p>
+
+      <div class="popup-images">
+        <img src="ss1.jpeg">
+        <img src="ss2.jpeg">
+      </div>
+
+      <button onclick="closePopup()">
+        Masuk Website
+      </button>
+
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <span class="blue">i</span>
+      <span>Venth</span>
+      <span class="purple">Official</span>
+    </div>
+
+    <div class="menu">
+      <button class="active" onclick="filterCategory('all',this)">Semua</button>
+      <button onclick="filterCategory('Bypass',this)">Bypass</button>
+      <button onclick="filterCategory('Inter No Simlock',this)">Inter No Simlock</button>
+      <button onclick="filterCategory('Resmi',this)">Resmi</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-text">
+      <h1>
+        iPhone <span>Trusted</span><br>
+        Recommendation
+      </h1>
+
+      <p>
+        Highlight rekomendasi iPhone bypass aman, termurah,
+        bergaransi, cocok buat harian, ngonten, live,
+        gaming & dijual kembali.
+      </p>
+
+      <div class="hero-alert">
+        ✅ Sudah order beberapa kali dan pemakaian lama aman bergaransi.
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="banner.png">
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="catalog">
+
+    <div class="products" id="productContainer">
+
+      <!-- PRODUCTS JS -->
+
+    </div>
+
+  </section>
+
+  <!-- IMAGE MODAL -->
+  <div class="image-modal" id="imageModal">
+    <span class="close-modal" onclick="closeImage()">&times;</span>
+    <img id="modalImage">
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

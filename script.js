@@ -1,0 +1,323 @@
+// script.js
+
+const products = [
+
+{
+  name:"iPhone 11",
+  category:"Bypass",
+  price:"Rp 2 Juta",
+  badge:"Trusted",
+  description:"iPhone bypass aman & termurah cocok buat harian dan dijual lagi.",
+  links:[
+    {
+      title:"Beli Sekarang",
+      url:"https://s.shopee.co.id/9Kf1ouIsqe"
+    }
+  ],
+  images:[
+    "https://borneostore.co.id/wp-content/uploads/2022/08/11-yellow.webp",
+    "https://borneostore.co.id/wp-content/uploads/2022/08/11-putih.jpg",
+    "https://borneostore.co.id/wp-content/uploads/2022/08/11-black.jpg",
+    "https://borneostore.co.id/wp-content/uploads/2022/08/11-ungu.jpg",
+    "https://borneostore.co.id/wp-content/uploads/2022/08/11-merah.jpg"
+  ]
+},
+
+{
+  name:"iPhone 13",
+  category:"Bypass",
+  price:"Rp 3,1 Juta",
+  badge:"Best Seller",
+  description:"Face ID ON, support WiFi, cocok ngonten, live & gaming. Garansi 1 bulan.",
+  links:[
+    {
+      title:"Beli Sekarang",
+      url:"https://s.shopee.co.id/9zuicDnO0X"
+    }
+  ],
+  images:[
+    "https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fi%2Fp%2Fiphone_13_midnight_1.jpg&w=1920&q=45",
+    "https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fi%2Fp%2Fiphone_13_midnight_3.jpg&w=1920&q=45",
+    "https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fi%2Fp%2Fiphone_13_midnight_8.jpg&w=1920&q=45",
+    "https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fi%2Fp%2Fiphone_13_midnight_6.1_3.jpg&w=1920&q=45",
+    "https://ibox.co.id/_next/image?url=https%3A%2F%2Fcdnpro.eraspace.com%2Fmedia%2Fcatalog%2Fproduct%2Fi%2Fp%2Fiphone_13_midnight_10.jpg&w=1920&q=45"
+  ]
+},
+
+{
+  name:"iPhone 14 Pro",
+  category:"Bypass",
+  price:"Rp 4 Juta",
+  badge:"Premium",
+  description:"Face ID ON, support WiFi, cocok gaming & content creator.",
+  links:[
+    {
+      title:"Toko 1",
+      url:"https://s.shopee.co.id/4Awvfidg2z"
+    },
+    {
+      title:"Toko 2",
+      url:"https://s.shopee.co.id/809eEug4X6"
+    },
+    {
+      title:"Toko 3",
+      url:"https://s.shopee.co.id/5L8t4Ia5JQ"
+    }
+  ],
+  images:[
+    "https://www.hellostore.id/cdn/shop/products/iPhone14Pro-Purple.jpg?v=1756580156&width=1100",
+    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-16.jpg?v=1756580156&width=1100",
+    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-18.jpg?v=1756580156&width=1100",
+    "https://www.hellostore.id/cdn/shop/products/Artboard2_69fe8189-e265-4c55-b2aa-309483652952.jpg?v=1756580156&width=1100",
+    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-19_395619c2-7f07-4e2e-ab24-3afa8a2d457e.jpg?v=1756580156&width=1100"
+  ]
+
+  
+},
+// TAMBAHKAN KE ARRAY const products = [ ... ]
+// letakkan di bawah product iPhone 14 Pro
+
+{
+  name:"iPhone 14 Pro Max",
+  category:"Inter No Simlock",
+  price:"Rp 7 Jutaan",
+  badge:"Inter",
+  description:"Inter all op, BH 90-100 bisa request, LCD & baterai ori tanpa notif dan bukan simlock.",
+  links:[
+    {
+      title:"Beli Sekarang",
+      url:"https://s.shopee.co.id/1BJK6iW3MZ"
+    }
+  ],
+  images:[
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNaSFlb8zZaM9KjTI93aerBJjbGGHI8eLiSw&s",
+    "https://www.hellostore.id/cdn/shop/products/iPhone14Pro-Purple.jpg?v=1756580156&width=1100",
+    "https://down-id.img.susercontent.com/file/id-11134207-7ra0s-mc06nbs1jpkje6.webp",
+    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-18.jpg?v=1756580156&width=1100",
+    "https://maivoli.vodafone.com.vu/wp-content/uploads/2024/05/Apple-iPhone-14-Pro-Max-05.webp"
+  ]
+},
+
+{
+  name:"iPhone 13 Pro Max",
+  category:"Inter No Simlock",
+  price:"Rp 6 Jutaan",
+  badge:"Recommended",
+  description:"Inter all op, BH 90-100 bisa request, LCD & baterai ori tanpa notif dan bukan simlock.",
+  links:[
+    {
+      title:"Beli sekarang",
+      url:"https://s.shopee.co.id/2g87t98VM7"
+    }
+  ],
+  images:[
+    "https://cellexportgt.com/cdn/shop/products/GKzs8E4g.jpg?v=1744227682&width=1080",
+    "https://mac-center.com/cdn/shop/articles/iphone-13-pro-iphone-13-pro-max-pantalla.png?v=1774982363",
+    "https://appstudio.su/wp-content/uploads/2023/02/db36c3f82fd19630bdb51ea93b13cd72.jpg",
+    "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mc06nbs1coqb8d.webp",
+    "https://appstudio.su/wp-content/uploads/2023/02/f28d901753d0efc44bd3f8c63955f037-700x700.jpg",
+    "https://appstudio.su/wp-content/uploads/2023/02/f28d901753d0efc44bd3f8c63955f037-700x700.jpg",
+    "https://appleworld.co.za/cdn/shop/files/iphone_13_pro_silver_pure_back_iphone_13_pro_silver_pure_front_2-up_screen__usen_2_4_1_1_1_1_1.jpg?v=1768545594&width=3840"
+  ]
+},
+
+{
+  name:"iPhone 16 Plus",
+  category:"Inter No Simlock",
+  price:"Rp 9 Jutaan",
+  badge:"Latest",
+  description:"Inter all op, BH 90-100 bisa request, LCD & baterai ori tanpa notif dan bukan simlock.",
+  links:[
+    {
+      title:"Beli Sekarang",
+      url:"https://s.shopee.co.id/50W2fVU2dc"
+    }
+  ],
+  images:[
+    "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-1.jpg?v=1734067695&width=823",
+    "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-3.jpg?v=1734067695&width=1680",
+    "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-4.jpg?v=1734067695&width=1680",
+    "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-5.jpg?v=1734067695&width=1680",
+    "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-6.jpg?v=1734067695&width=1680",
+    "assets/css/free.png"
+  ]
+},
+];
+
+const container = document.getElementById('productContainer');
+
+function renderProducts(data){
+
+  container.innerHTML='';
+
+  data.forEach((product,index)=>{
+
+    let linksHTML='';
+
+    product.links.forEach((link,i)=>{
+
+      linksHTML += `
+      <a href="${link.url}" target="_blank"
+      class="${i === 0 ? 'primary':'secondary'}">
+      ${link.title}
+      </a>
+      `;
+
+    });
+
+    let imagesHTML='';
+
+    product.images.forEach((img)=>{
+
+      imagesHTML += `
+      <img src="${img}" onclick="openImage('${img}')">
+      `;
+
+    });
+
+    container.innerHTML += `
+
+    <div class="card" data-category="${product.category}">
+
+      <div class="badge">
+        ${product.badge}
+      </div>
+
+      <div class="slider">
+
+        <div class="slides" id="slide-${index}">
+          ${imagesHTML}
+        </div>
+
+        <div class="slider-buttons">
+          <button onclick="prevSlide(${index})">‹</button>
+          <button onclick="nextSlide(${index})">›</button>
+        </div>
+
+      </div>
+
+      <div class="card-content">
+
+        <h3>${product.name}</h3>
+
+        <div class="category">
+          ${product.category}
+        </div>
+
+        <div class="price">
+          ${product.price}
+        </div>
+
+        <div class="desc">
+          ${product.description}
+        </div>
+
+        <div class="links">
+          ${linksHTML}
+        </div>
+
+      </div>
+
+    </div>
+
+    `;
+
+  });
+
+}
+
+renderProducts(products);
+
+const slideIndex = {};
+
+function nextSlide(id){
+
+  const slides =
+  document.querySelectorAll(`#slide-${id} img`);
+
+  if(!slideIndex[id]) slideIndex[id]=0;
+
+  slideIndex[id]++;
+
+  if(slideIndex[id] >= slides.length){
+    slideIndex[id]=0;
+  }
+
+  updateSlide(id);
+
+}
+
+function prevSlide(id){
+
+  const slides =
+  document.querySelectorAll(`#slide-${id} img`);
+
+  if(!slideIndex[id]) slideIndex[id]=0;
+
+  slideIndex[id]--;
+
+  if(slideIndex[id] < 0){
+    slideIndex[id]=slides.length-1;
+  }
+
+  updateSlide(id);
+
+}
+
+function updateSlide(id){
+
+  const slide =
+  document.getElementById(`slide-${id}`);
+
+  slide.style.transform =
+  `translateX(-${slideIndex[id] * 100}%)`;
+
+}
+
+function filterCategory(category,btn){
+
+  document.querySelectorAll('.menu button')
+  .forEach(b=>b.classList.remove('active'));
+
+  btn.classList.add('active');
+
+  const cards =
+  document.querySelectorAll('.card');
+
+  cards.forEach(card=>{
+
+    if(category === 'all'){
+      card.style.display='block';
+    }else{
+
+      card.style.display =
+      card.dataset.category === category
+      ? 'block'
+      : 'none';
+
+    }
+
+  });
+
+}
+
+function closePopup(){
+  document.getElementById('popup').style.display='none';
+}
+
+function openImage(src){
+
+  document.getElementById('imageModal')
+  .style.display='flex';
+
+  document.getElementById('modalImage')
+  .src = src;
+
+}
+
+function closeImage(){
+
+  document.getElementById('imageModal')
+  .style.display='none';
+
+}
