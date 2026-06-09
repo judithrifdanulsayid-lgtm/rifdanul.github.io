@@ -98,7 +98,7 @@ const products = [
     },
     {
       title:"Toko 2",
-      url:"https://s.shopee.co.id/809eEug4X6"
+      url:"https://s.shopee.co.id/qgzD2ltfX"
     },
     {
       title:"Toko 3",
