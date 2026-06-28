@@ -94,15 +94,15 @@ const products = [
   links:[
     {
       title:"Toko 1",
-      url:"https://s.shopee.co.id/4Awvfidg2z"
+      url:"https://s.shopee.co.id/60Pa8o0Ujg"
     },
     {
       title:"Toko 2",
-      url:"https://s.shopee.co.id/qgzD2ltfX"
+      url:"https://s.shopee.co.id/4Awvfidg2z"
     },
     {
       title:"Toko 3",
-      url:"https://s.shopee.co.id/5L8t4Ia5JQ"
+      url:"https://s.shopee.co.id/1LdkaM9b7a"
     }
   ],
   images:[
