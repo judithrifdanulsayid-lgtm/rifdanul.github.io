@@ -42,7 +42,25 @@ const products = [
     "https://down-id.img.susercontent.com/file/id-11134207-822wi-mmr9kjvq0w0485.webp"
   ]
 },
-  
+   {
+  name:"iPhone 13 Pro & 13 Promax",
+  category:"Bypass",
+  price:"Rp 3,2 Juta",
+  badge:"Trusted",
+  description:"iPhone bypass aman & termurah cocok buat harian dan dijual lagi.",
+  links:[
+    {
+      title:"Beli Sekarang",
+      url:" https://s.shopee.co.id/5fmi0FpwRy"
+    }
+  ],
+  images:[
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC9nuK_SCqlw6DKwus0ciYntpwfnnWx-fjyqlUv6FeavgEqAqWLo3GY8jo&s=10",
+    "https://unboxing.id/wp-content/uploads/2022/04/ip-13-promax-green-600x600.jpg",
+    "https://kevajo.com/wp-content/uploads/2021/09/iphone13pro1.webp",
+    "https://propreowned.com/cdn/shop/files/Pro_iPhone_13_Pro_Max_Gold.webp?v=1739250320&width=700",
+  ]
+},
 {
   name:"iPhone 15",
   category:"Bypass",
