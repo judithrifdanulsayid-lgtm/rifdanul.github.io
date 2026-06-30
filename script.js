@@ -2,6 +2,37 @@
 
 const products = [
 
+  {
+  name:"iPhone 14 Pro & 14 Promax",
+  category:"Bypass",
+  price:"Rp 4 Juta",
+  badge:"Premium",
+  description:"Face ID ON, support WiFi, cocok gaming & content creator.",
+  links:[
+    {
+      title:"Toko 1",
+      url:"https://s.shopee.co.id/60Pa8o0Ujg"
+    },
+    {
+      title:"Toko 2",
+      url:"https://s.shopee.co.id/4Awvfidg2z"
+    },
+    {
+      title:"Toko 3",
+      url:"https://s.shopee.co.id/1LdkaM9b7a"
+    }
+  ],
+  images:[
+    "https://www.hellostore.id/cdn/shop/products/iPhone14Pro-Purple.jpg?v=1756580156&width=1100",
+    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-16.jpg?v=1756580156&width=1100",
+    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-18.jpg?v=1756580156&width=1100",
+    "https://www.hellostore.id/cdn/shop/products/Artboard2_69fe8189-e265-4c55-b2aa-309483652952.jpg?v=1756580156&width=1100",
+    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-19_395619c2-7f07-4e2e-ab24-3afa8a2d457e.jpg?v=1756580156&width=1100"
+  ]
+
+  
+},
+
 {
   name:"iPhone 11",
   category:"Bypass",
@@ -103,36 +134,7 @@ const products = [
   ]
 },
 
-{
-  name:"iPhone 14 Pro",
-  category:"Bypass",
-  price:"Rp 4 Juta",
-  badge:"Premium",
-  description:"Face ID ON, support WiFi, cocok gaming & content creator.",
-  links:[
-    {
-      title:"Toko 1",
-      url:"https://s.shopee.co.id/60Pa8o0Ujg"
-    },
-    {
-      title:"Toko 2",
-      url:"https://s.shopee.co.id/4Awvfidg2z"
-    },
-    {
-      title:"Toko 3",
-      url:"https://s.shopee.co.id/1LdkaM9b7a"
-    }
-  ],
-  images:[
-    "https://www.hellostore.id/cdn/shop/products/iPhone14Pro-Purple.jpg?v=1756580156&width=1100",
-    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-16.jpg?v=1756580156&width=1100",
-    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-18.jpg?v=1756580156&width=1100",
-    "https://www.hellostore.id/cdn/shop/products/Artboard2_69fe8189-e265-4c55-b2aa-309483652952.jpg?v=1756580156&width=1100",
-    "https://www.hellostore.id/cdn/shop/products/iPhone14ProMax-19_395619c2-7f07-4e2e-ab24-3afa8a2d457e.jpg?v=1756580156&width=1100"
-  ]
 
-  
-},
 // TAMBAHKAN KE ARRAY const products = [ ... ]
 // letakkan di bawah product iPhone 14 Pro
 
