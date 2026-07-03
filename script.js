@@ -101,7 +101,7 @@ const products = [
   links:[
     {
       title:"Beli Sekarang",
-      url:"https://s.shopee.co.id/4ftUzfIIZR"
+      url:"https://s.shopee.co.id/AUs7kWXBGB"
     }
   ],
   images:[
@@ -158,6 +158,30 @@ const products = [
     "https://maivoli.vodafone.com.vu/wp-content/uploads/2024/05/Apple-iPhone-14-Pro-Max-05.webp"
   ]
 },
+
+  {
+  name:"iPhone 14 Plus",
+  category:"Inter No Simlock",
+  price:"Rp 5 Juta",
+  badge:"Trusted",
+  description:"iPhone bypass aman & termurah cocok buat harian dan dijual lagi.",
+  links:[
+    {
+      title:"Beli Sekarang",
+      url:"https://s.shopee.co.id/7prMa7Dciz"
+    }
+  ],
+  images:[
+    "https://down-id.img.susercontent.com/file/id-11134207-822wj-mmr9kjvnizns9d.webp",
+    "https://down-id.img.susercontent.com/file/id-11134207-822wh-mp0hmn43ewp7f4.webp",
+    "https://down-id.img.susercontent.com/file/id-11134207-822wm-mmr9kjvfludg97.webp",
+    "https://down-id.img.susercontent.com/file/id-11134207-822wt-mmr9kjveqxvnd5.webp",
+    "https://down-id.img.susercontent.com/file/id-11134207-822wi-mmr9kjvq0w0485.webp"
+  ]
+},
+
+
+  
 
 {
   name:"iPhone 13 Pro Max",
