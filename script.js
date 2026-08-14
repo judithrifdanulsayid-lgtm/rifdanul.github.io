@@ -2,6 +2,26 @@
 
 const products = [
 
+{
+  name:"iPhone 15 Pro",
+  category:"Bypass",
+  price:"Rp 4,5 Juta",
+  badge:"★ Top Seller",
+  isSpecial: true,
+  description:"iPhone bypass aman, super mulus. Cocok untuk ngonten, gaming, dan pemakaian harian bergaransi.",
+  links:[
+    {
+      title:"Beli Sekarang",
+      url:"https://s.shopee.co.id/8KoiM1adXw"
+    }
+  ],
+  images:[
+    "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_15_pro_natural_titanium_1_4.jpg",
+    "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_15_pro_natural_titanium_1a_4.jpg",
+    "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_15_pro_natural_titanium_2_4.jpg",
+    "https://cdnpro.eraspace.com/media/catalog/product/a/p/apple_iphone_15_pro_natural_titanium_4_4.jpg"
+  ]
+},
   {
   name:"iPhone 14 Pro & 14 Promax",
   category:"Bypass",
@@ -261,9 +281,9 @@ function renderProducts(data){
 
     container.innerHTML += `
 
-    <div class="card" data-category="${product.category}">
+    <div class="card ${product.isSpecial ? 'card-featured' : ''}" data-category="${product.category}">
 
-      <div class="badge">
+      <div class="badge ${product.isSpecial ? 'special-badge' : ''}">
         ${product.badge}
       </div>
 
