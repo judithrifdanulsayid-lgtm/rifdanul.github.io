@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Layanan Khusus - iVenth Official</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #fbbf24;
+      --secondary: #1e293b;
+      --bg-glass: rgba(15, 23, 42, 0.4);
+      --border-glass: rgba(255, 215, 0, 0.2);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('bg-elegant.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 5px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(to right, #fbbf24, #fef08a, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+    }
+
+    .header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .back-nav {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: #fff;
+      text-decoration: none;
+      background: var(--bg-glass);
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border-glass);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .glass-box {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-glass);
+      border-radius: 24px;
+      padding: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      margin-bottom: 25px;
+      animation: slideUp 0.8s ease-out;
+    }
+
+    /* Catalog Cards */
+    .catalog-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+    }
+
+    .card.selected {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
+      border-color: #fbbf24;
+      box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+
+    .card-info h3 {
+      margin: 0 0 5px 0;
+      font-size: 16px;
+    }
+
+    .card-price {
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffd700;
+      margin-bottom: 5px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: #ccc;
+      line-height: 1.4;
+    }
+
+    .badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #334155;
+      color: #fbbf24;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-bottom-left-radius: 16px;
+    }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .form-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .form-input:focus {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #fbbf24;
+    }
+
+    .btn-submit {
+      background: linear-gradient(45deg, #fbbf24, #d97706);
+      color: #0f172a;
+      border: none;
+      width: 100%;
+      padding: 16px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3);
+      animation: pulseBtn 2s infinite;
+    }
+
+    .btn-submit:active {
+      transform: scale(0.95);
+    }
+
+    /* Animations */
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulseBtn {
+      0% {
+        box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.6);
+      }
+
+      70% {
+        box-shadow: 0 0 0 10px rgba(251, 191, 36, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(251, 191, 36, 0);
+      }
+    }
+
+    @keyframes shine {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <a href="index.html" class="back-nav">← Kembali</a>
+
+    <div class="header">
+      <h1>Layanan Khusus</h1>
+      <p>Pilih paket layanan Anda, proses cepat & aman.</p>
+    </div>
+
+    <div class="glass-box">
+      <h2
+        style="font-size: 18px; margin-top: 0; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">
+        📦 Pilih Katalog</h2>
+      <div class="catalog-grid" id="catalogList">
+        <!-- Cards injected by JS -->
+      </div>
+    </div>
+
+    <div class="glass-box" style="animation-delay: 0.2s;">
+      <h2
+        style="font-size: 18px; margin-top: 0; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">
+        ✍️ Formulir Data</h2>
+
+      <div class="form-group">
+        <label>Imei 1</label>
+        <input type="text" id="deviceId" class="form-input" placeholder="Masukkan Imei kamu...">
+      </div>
+
+      <button class="btn-submit" onclick="sendData()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="22" alt="WA">
+        Kirim Pesanan ke Admin
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const packages = [
+      { id: 1, name: "Paket 1 Bulan", price: "Rp 150.000", badge: "FAST", desc: "Proses 1-2 jam. Open 10.00-22.00" },
+      { id: 2, name: "Paket 3 Bulan", price: "Rp 200.000", badge: "SEMI FAST", desc: "Proses 1-2 jam. Open 10.00-22.00" },
+      { id: 3, name: "Paket 3 Bulan", price: "Rp 185.000", badge: "SLOW", desc: "Proses 1-2 Hari." },
+      { id: 4, name: "Paket Premium", price: "Rp 230.000", badge: "⚡ SUPER FAST", desc: "Proses kilat di bawah 1 jam (bisa 5 menit)." }
+    ];
+
+    let selectedPackage = null;
+    const catalogList = document.getElementById('catalogList');
+
+    function renderCards() {
+      catalogList.innerHTML = '';
+      packages.forEach(pkg => {
+        const isSelected = selectedPackage && selectedPackage.id === pkg.id;
+
+        const card = document.createElement('div');
+        card.className = `card ${isSelected ? 'selected' : ''}`;
+        card.onclick = () => {
+          selectedPackage = pkg;
+          renderCards();
+          // Haptic feedback if supported
+          if (navigator.vibrate) navigator.vibrate(50);
+        };
+
+        card.innerHTML = `
+          <div class="badge" style="background: ${pkg.id === 4 ? '#d97706' : '#334155'}">${pkg.badge}</div>
+          <div class="card-info">
+            <h3>${pkg.name}</h3>
+            <div class="card-price">${pkg.price}</div>
+            <div class="card-desc">${pkg.desc}</div>
+          </div>
+          <div style="font-size: 24px; color: ${isSelected ? '#fbbf24' : 'rgba(255,255,255,0.2)'}">
+            ${isSelected ? '☑' : '☐'}
+          </div>
+        `;
+        catalogList.appendChild(card);
+      });
+    }
+
+    function sendData() {
+      const deviceId = document.getElementById('deviceId').value.trim();
+
+      if (!selectedPackage) {
+        alert('Tolong pilih salah satu paket terlebih dahulu!');
+        return;
+      }
+      if (!deviceId) {
+        alert('Tolong masukkan ID Perangkat Anda!');
+        document.getElementById('deviceId').focus();
+        return;
+      }
+
+      const phoneNumber = "6281217373971";
+      const message = `Halo Admin,%0A%0ASaya ingin memesan Layanan Khusus:%0A*Paket:* ${selectedPackage.name} (${selectedPackage.badge})%0A*Harga:* ${selectedPackage.price}%0A*ID Perangkat:* ${deviceId}%0A%0AMohon diproses, terima kasih.`;
+
+      const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(waUrl, '_blank');
+    }
+
+    renderCards();
+  </script>
+</body>
+
+</html>
