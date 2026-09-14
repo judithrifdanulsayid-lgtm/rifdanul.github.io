@@ -245,7 +245,7 @@ const products = [
     "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-5.jpg?v=1734067695&width=1680",
     "https://www.digimap.co.id/cdn/shop/files/0788-APPMXVX3ID-A-6.jpg?v=1734067695&width=1680"
   ]
-},
+}
 ];
 
 const container = document.getElementById('productContainer');
