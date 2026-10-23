@@ -1,258 +1,542 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Layanan Khusus - iVenth Official</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Layanan Khusus IMEI & Bypass — iVenth Official</title>
+  <meta name="description" content="Layanan khusus bypass dan aktivasi IMEI iPhone cepat, aman, dan bergaransi resmi dari teknisi iVenth Official.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+
   <style>
     :root {
-      --primary: #fbbf24;
-      --secondary: #1e293b;
-      --bg-glass: rgba(15, 23, 42, 0.4);
-      --border-glass: rgba(255, 215, 0, 0.2);
+      /* Apple Clean Light Palette */
+      --bg-base: #fbfbfd;
+      --bg-card: #ffffff;
+      --bg-card-hover: #fcfcfd;
+      --glass-nav: rgba(255, 255, 255, 0.88);
+      --glass-border: rgba(0, 0, 0, 0.08);
+      --glass-border-focus: rgba(0, 113, 227, 0.45);
+      
+      --apple-blue: #0071e3;
+      --apple-blue-hover: #0077ed;
+      --apple-blue-light: #2997ff;
+      --apple-green: #34c759;
+      --apple-wa: #25d366;
+      
+      --text-primary: #1d1d1f;
+      --text-secondary: #515154;
+      --text-tertiary: #86868b;
+      
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-pill: 980px;
+      --ease-apple: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: url('bg-elegant.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, sans-serif;
+      min-height: 100vh;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
     }
 
-    .overlay {
+    /* Ambient Clean Light Glow */
+    .ambient-glow {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
+      pointer-events: none;
       z-index: -1;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      border-radius: 50%;
+      filter: blur(140px);
+    }
+    .glow-top {
+      width: 550px;
+      height: 550px;
+      top: -180px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.06) 0%, rgba(240, 247, 255, 0.5) 45%, rgba(251, 251, 253, 0) 70%);
     }
 
-    .container {
-      max-width: 600px;
+    /* Top Sticky Bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--glass-nav);
+      backdrop-filter: blur(24px) saturate(190%);
+      -webkit-backdrop-filter: blur(24px) saturate(190%);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 12px 16px;
+    }
+
+    .top-bar-inner {
+      max-width: 680px;
       margin: 0 auto;
-      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f5f5f7;
+      border: 1px solid #e5e5ea;
+      color: var(--text-primary);
+      padding: 7px 14px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s var(--ease-apple);
+    }
+
+    .btn-back:hover {
+      background: #e5e5ea;
+    }
+
+    .btn-back:active {
+      transform: scale(0.96);
+    }
+
+    .top-brand {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-brand-logo {
+      height: 28px;
+      width: auto;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: #f5f5f7;
+      border: 1px solid #e5e5ea;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--apple-green);
+      box-shadow: 0 0 6px var(--apple-green);
+    }
+
+    /* Container */
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    /* Page Header */
     .header {
       text-align: center;
-      margin-bottom: 30px;
-      animation: fadeInDown 1s ease-out;
+      margin-bottom: 28px;
+    }
+
+    .header-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--apple-blue);
+      margin-bottom: 8px;
+      text-transform: uppercase;
     }
 
     .header h1 {
       font-size: 28px;
       font-weight: 800;
-      margin-bottom: 5px;
-      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      background: linear-gradient(to right, #fbbf24, #fef08a, #fbbf24);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 3s linear infinite;
+      letter-spacing: -0.025em;
+      color: #1d1d1f;
+      margin-bottom: 8px;
     }
 
     .header p {
       font-size: 14px;
-      opacity: 0.9;
+      color: var(--text-secondary);
+      line-height: 1.5;
     }
 
-    .back-nav {
-      display: inline-block;
-      margin-bottom: 15px;
-      color: #fff;
-      text-decoration: none;
-      background: var(--bg-glass);
-      padding: 8px 16px;
-      border-radius: 20px;
-      border: 1px solid var(--border-glass);
-      font-size: 14px;
-      font-weight: 500;
+    /* Step Card Box */
+    .step-box {
+      background: #ffffff;
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-xl);
+      padding: 22px 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
-    .glass-box {
-      background: var(--bg-glass);
-      border: 1px solid var(--border-glass);
-      border-radius: 24px;
-      padding: 20px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      margin-bottom: 25px;
-      animation: slideUp 0.8s ease-out;
+    .step-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     }
 
-    /* Catalog Cards */
-    .catalog-grid {
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--apple-blue);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Package Cards */
+    .package-grid {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
     }
 
-    .card {
-      background: rgba(0, 0, 0, 0.4);
-      border: 2px solid rgba(255, 255, 255, 0.1);
-      border-radius: 16px;
+    .package-card {
+      background: #ffffff;
+      border: 1.5px solid #e5e5ea;
+      border-radius: var(--radius-lg);
       padding: 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: all 0.3s;
+      gap: 12px;
+      cursor: pointer;
       position: relative;
       overflow: hidden;
+      transition: all 0.25s var(--ease-apple);
     }
 
-    .card:active {
+    .package-card:hover {
+      background: #fbfbfd;
+      border-color: #d2d2d7;
+    }
+
+    .package-card:active {
       transform: scale(0.98);
     }
 
-    .card.selected {
-      background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
-      border-color: #fbbf24;
-      box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    .package-card.selected {
+      background: #f7faff;
+      border-color: var(--apple-blue);
+      box-shadow: 0 0 20px rgba(0, 113, 227, 0.15);
     }
 
-    .card-info h3 {
-      margin: 0 0 5px 0;
-      font-size: 16px;
+    .pkg-info {
+      flex: 1;
     }
 
-    .card-price {
-      font-size: 20px;
+    .pkg-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .pkg-name {
+      font-size: 15.5px;
       font-weight: 700;
-      color: #ffd700;
-      margin-bottom: 5px;
+      color: #1d1d1f;
     }
 
-    .card-desc {
+    .pkg-badge {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: var(--radius-pill);
+      letter-spacing: 0.04em;
+    }
+
+    .badge-fast {
+      background: rgba(0, 113, 227, 0.08);
+      color: var(--apple-blue);
+      border: 1px solid rgba(0, 113, 227, 0.25);
+    }
+
+    .badge-super {
+      background: var(--apple-blue);
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .badge-slow {
+      background: #f5f5f7;
+      color: var(--text-secondary);
+      border: 1px solid #e5e5ea;
+    }
+
+    .pkg-price {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--apple-blue);
+      margin-bottom: 4px;
+    }
+
+    .pkg-desc {
       font-size: 12px;
-      color: #ccc;
+      color: var(--text-secondary);
       line-height: 1.4;
     }
 
-    .badge {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: #334155;
-      color: #fbbf24;
-      font-size: 10px;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-bottom-left-radius: 16px;
+    .pkg-radio {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #d2d2d7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
     }
 
-    /* Form */
-    .form-group {
-      margin-bottom: 20px;
+    .package-card.selected .pkg-radio {
+      border-color: var(--apple-blue);
+      background: var(--apple-blue);
     }
 
-    .form-group label {
+    .pkg-radio-inner {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ffffff;
+      display: none;
+    }
+
+    .package-card.selected .pkg-radio-inner {
       display: block;
-      font-size: 14px;
+    }
+
+    /* Form Group */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 8px;
+    }
+
+    .form-label {
+      font-size: 13.5px;
       font-weight: 600;
+      color: #1d1d1f;
+    }
+
+    .form-counter {
+      font-size: 11.5px;
+      color: var(--text-tertiary);
+      font-weight: 500;
+    }
+
+    .form-counter.valid {
+      color: var(--apple-blue);
+      font-weight: 700;
+    }
+
+    .input-wrapper {
+      position: relative;
     }
 
     .form-input {
       width: 100%;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      color: #fff;
-      padding: 15px;
-      border-radius: 12px;
-      font-size: 16px;
-      font-family: 'Poppins', sans-serif;
-      box-sizing: border-box;
+      background: #f5f5f7;
+      border: 1px solid #d2d2d7;
+      color: #1d1d1f;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      font-size: 15px;
+      font-family: inherit;
       outline: none;
-      transition: 0.3s;
-    }
-
-    .form-input::placeholder {
-      color: rgba(255, 255, 255, 0.5);
+      transition: all 0.2s var(--ease-apple);
+      letter-spacing: 0.04em;
     }
 
     .form-input:focus {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: #fbbf24;
+      background: #ffffff;
+      border-color: var(--apple-blue);
+      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.18);
     }
 
-    .btn-submit {
-      background: linear-gradient(45deg, #fbbf24, #d97706);
-      color: #0f172a;
-      border: none;
-      width: 100%;
-      padding: 16px;
-      border-radius: 30px;
+    .form-input::placeholder {
+      color: var(--text-tertiary);
+    }
+
+    .input-check {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--apple-blue);
       font-size: 16px;
-      font-weight: 800;
+      display: none;
+    }
+
+    .form-helper {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .form-helper code {
+      background: #f5f5f7;
+      border: 1px solid #e5e5ea;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--apple-blue);
+      font-weight: 600;
+    }
+
+    /* Live Summary Card */
+    .summary-card {
+      background: #f5f5f7;
+      border: 1px dashed #d2d2d7;
+      border-radius: var(--radius-md);
+      padding: 14px;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    .summary-row {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      color: var(--text-secondary);
+    }
+
+    .summary-row:last-child {
+      margin-bottom: 0;
+      padding-top: 8px;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      font-weight: 700;
+      color: #1d1d1f;
+      font-size: 14px;
+    }
+
+    .summary-val {
+      color: #1d1d1f;
+      font-weight: 600;
+    }
+
+    .summary-total {
+      color: var(--apple-blue);
+    }
+
+    /* Submit Button */
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: #ffffff;
+      border: none;
+      padding: 16px;
+      border-radius: var(--radius-pill);
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
       align-items: center;
+      justify-content: center;
       gap: 10px;
-      box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3);
-      animation: pulseBtn 2s infinite;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+      transition: all 0.25s var(--ease-apple);
+    }
+
+    .btn-submit:hover {
+      filter: brightness(1.08);
+      box-shadow: 0 6px 26px rgba(37, 211, 102, 0.4);
     }
 
     .btn-submit:active {
-      transform: scale(0.95);
+      transform: scale(0.97);
     }
 
-    /* Animations */
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .btn-submit img {
+      width: 22px;
+      height: 22px;
     }
 
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* Trust Guarantee Grid */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 24px;
+      text-align: center;
     }
 
-    @keyframes pulseBtn {
-      0% {
-        box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.6);
-      }
-
-      70% {
-        box-shadow: 0 0 0 10px rgba(251, 191, 36, 0);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0 rgba(251, 191, 36, 0);
-      }
+    .trust-item {
+      background: #ffffff;
+      border: 1px solid #e5e5ea;
+      border-radius: var(--radius-md);
+      padding: 12px 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
     }
 
-    @keyframes shine {
-      0% {
-        background-position: 0% 50%;
-      }
+    .trust-icon {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
 
-      50% {
-        background-position: 100% 50%;
-      }
+    .trust-title {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #1d1d1f;
+      margin-bottom: 2px;
+    }
 
-      100% {
-        background-position: 0% 50%;
+    .trust-sub {
+      font-size: 10px;
+      color: var(--text-secondary);
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 24px;
+      }
+      .pkg-price {
+        font-size: 16px;
+      }
+      .pkg-name {
+        font-size: 14px;
       }
     }
   </style>
@@ -260,104 +544,252 @@
 
 <body>
 
-  <div class="overlay"></div>
+  <div class="ambient-glow glow-top"></div>
 
-  <div class="container">
-    <a href="index.html" class="back-nav">← Kembali</a>
+  <!-- Top Navigation -->
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <a href="index.html" class="btn-back">
+        <span>‹</span>
+        <span>Kembali ke Katalog</span>
+      </a>
+
+      <div class="top-brand">
+        <img src="logo.svg" alt="iVenth Official" class="top-brand-logo">
+      </div>
+
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>Open 10:00 - 22:00</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
 
     <div class="header">
-      <h1>Layanan Khusus</h1>
-      <p>Pilih paket layanan Anda, proses cepat & aman.</p>
+      <div class="header-tag">LAYANAN PROFESIONAL</div>
+      <h1>Layanan Khusus IMEI & Bypass</h1>
+      <p>Pilih paket layanan Anda, masukkan nomor IMEI 1, dan konfirmasi langsung ke Admin WhatsApp kami.</p>
     </div>
 
-    <div class="glass-box">
-      <h2
-        style="font-size: 18px; margin-top: 0; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">
-        📦 Pilih Katalog</h2>
-      <div class="catalog-grid" id="catalogList">
-        <!-- Cards injected by JS -->
+    <!-- Step 1: Package Selector -->
+    <div class="step-box">
+      <div class="step-title">
+        <span class="step-num">1</span>
+        <span>Pilih Paket Layanan</span>
+      </div>
+
+      <div class="package-grid" id="packageList">
+        <!-- Injected via JavaScript -->
       </div>
     </div>
 
-    <div class="glass-box" style="animation-delay: 0.2s;">
-      <h2
-        style="font-size: 18px; margin-top: 0; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">
-        ✍️ Formulir Data</h2>
+    <!-- Step 2: Device Information -->
+    <div class="step-box">
+      <div class="step-title">
+        <span class="step-num">2</span>
+        <span>Data Perangkat & IMEI</span>
+      </div>
 
       <div class="form-group">
-        <label>Imei 1</label>
-        <input type="text" id="deviceId" class="form-input" placeholder="Masukkan Imei kamu...">
+        <div class="form-label-row">
+          <label class="form-label" for="imeiInput">Nomor IMEI 1 (15 Digit)</label>
+          <span class="form-counter" id="imeiCounter">0 / 15 digit</span>
+        </div>
+
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="imeiInput" 
+            class="form-input" 
+            placeholder="Contoh: 352948102938475" 
+            maxlength="18"
+            oninput="handleImeiInput(this)"
+          />
+          <span class="input-check" id="imeiCheck">✓</span>
+        </div>
+
+        <div class="form-helper">
+          💡 Tips: Buka dialer telepon lalu ketik <code>*#06#</code> untuk melihat IMEI 1 perangkat iPhone Anda.
+        </div>
       </div>
 
-      <button class="btn-submit" onclick="sendData()">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="22" alt="WA">
-        Kirim Pesanan ke Admin
+      <!-- Live Summary -->
+      <div class="summary-card">
+        <div class="summary-row">
+          <span>Paket Terpilih:</span>
+          <span class="summary-val" id="sumPackage">- Belum dipilih -</span>
+        </div>
+        <div class="summary-row">
+          <span>Estimasi Pengerjaan:</span>
+          <span class="summary-val" id="sumSpeed">-</span>
+        </div>
+        <div class="summary-row">
+          <span>Total Biaya:</span>
+          <span class="summary-val summary-total" id="sumPrice">Rp 0</span>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button class="btn-submit" onclick="sendOrder()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        <span>Order via WhatsApp Admin</span>
       </button>
     </div>
-  </div>
+
+    <!-- Trust Badges -->
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">⚡</div>
+        <div class="trust-title">Proses Cepat</div>
+        <div class="trust-sub">Mulai dari 5 Menit</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <div class="trust-title">Garansi Toko</div>
+        <div class="trust-sub">Dukungan Penuh</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔒</div>
+        <div class="trust-title">Data Aman</div>
+        <div class="trust-sub">Privasi Terjaga</div>
+      </div>
+    </div>
+
+  </main>
 
   <script>
     const packages = [
-      { id: 1, name: "Paket 1 Bulan", price: "Rp 150.000", badge: "FAST", desc: "Proses 1-2 jam. Open 10.00-22.00" },
-      { id: 2, name: "Paket 3 Bulan", price: "Rp 200.000", badge: "SEMI FAST", desc: "Proses 1-2 jam. Open 10.00-22.00" },
-      { id: 3, name: "Paket 3 Bulan", price: "Rp 185.000", badge: "SLOW", desc: "Proses 1-2 Hari." },
-      { id: 4, name: "Paket Premium", price: "Rp 230.000", badge: "⚡ SUPER FAST", desc: "Proses kilat di bawah 1 jam (bisa 5 menit)." }
+      { 
+        id: 1, 
+        name: "Paket 1 Bulan", 
+        priceNum: 150000, 
+        price: "Rp 150.000", 
+        badge: "FAST", 
+        badgeClass: "badge-fast",
+        desc: "Proses cepat 1-2 jam. Jam operasional 10.00 - 22.00 WIB." 
+      },
+      { 
+        id: 2, 
+        name: "Paket 3 Bulan", 
+        priceNum: 200000, 
+        price: "Rp 200.000", 
+        badge: "SEMI FAST", 
+        badgeClass: "badge-fast",
+        desc: "Proses 1-2 jam. Paling hemat untuk durasi 3 bulan." 
+      },
+      { 
+        id: 3, 
+        name: "Paket 3 Bulan (Reguler)", 
+        priceNum: 185000, 
+        price: "Rp 185.000", 
+        badge: "HEMAT", 
+        badgeClass: "badge-slow",
+        desc: "Proses santai 1-2 hari kerja. Tarif paling ekonomis." 
+      },
+      { 
+        id: 4, 
+        name: "Paket Premium Kilat", 
+        priceNum: 230000, 
+        price: "Rp 230.000", 
+        badge: "⚡ SUPER FAST", 
+        badgeClass: "badge-super",
+        desc: "Prioritas nomor 1 antrean kilat di bawah 1 jam (bisa 5-15 menit selesai)." 
+      }
     ];
 
-    let selectedPackage = null;
-    const catalogList = document.getElementById('catalogList');
+    let selectedPackage = packages[0];
 
-    function renderCards() {
-      catalogList.innerHTML = '';
+    const packageList = document.getElementById('packageList');
+
+    function renderPackages() {
+      packageList.innerHTML = '';
       packages.forEach(pkg => {
         const isSelected = selectedPackage && selectedPackage.id === pkg.id;
 
         const card = document.createElement('div');
-        card.className = `card ${isSelected ? 'selected' : ''}`;
+        card.className = `package-card ${isSelected ? 'selected' : ''}`;
         card.onclick = () => {
           selectedPackage = pkg;
-          renderCards();
-          // Haptic feedback if supported
-          if (navigator.vibrate) navigator.vibrate(50);
+          renderPackages();
+          updateSummary();
+          if (navigator.vibrate) navigator.vibrate(35);
         };
 
         card.innerHTML = `
-          <div class="badge" style="background: ${pkg.id === 4 ? '#d97706' : '#334155'}">${pkg.badge}</div>
-          <div class="card-info">
-            <h3>${pkg.name}</h3>
-            <div class="card-price">${pkg.price}</div>
-            <div class="card-desc">${pkg.desc}</div>
+          <div class="pkg-info">
+            <div class="pkg-top">
+              <span class="pkg-name">${pkg.name}</span>
+              <span class="pkg-badge ${pkg.badgeClass}">${pkg.badge}</span>
+            </div>
+            <div class="pkg-price">${pkg.price}</div>
+            <div class="pkg-desc">${pkg.desc}</div>
           </div>
-          <div style="font-size: 24px; color: ${isSelected ? '#fbbf24' : 'rgba(255,255,255,0.2)'}">
-            ${isSelected ? '☑' : '☐'}
+          <div class="pkg-radio">
+            <div class="pkg-radio-inner"></div>
           </div>
         `;
-        catalogList.appendChild(card);
+        packageList.appendChild(card);
       });
     }
 
-    function sendData() {
-      const deviceId = document.getElementById('deviceId').value.trim();
+    function updateSummary() {
+      const sumPackage = document.getElementById('sumPackage');
+      const sumSpeed = document.getElementById('sumSpeed');
+      const sumPrice = document.getElementById('sumPrice');
+
+      if (selectedPackage) {
+        sumPackage.innerText = `${selectedPackage.name} (${selectedPackage.badge})`;
+        sumSpeed.innerText = selectedPackage.desc.split('.')[0];
+        sumPrice.innerText = selectedPackage.price;
+      }
+    }
+
+    function handleImeiInput(input) {
+      let val = input.value.replace(/\D/g, '');
+      input.value = val;
+
+      const counter = document.getElementById('imeiCounter');
+      const check = document.getElementById('imeiCheck');
+
+      counter.innerText = `${val.length} / 15 digit`;
+
+      if (val.length === 15) {
+        counter.classList.add('valid');
+        check.style.display = 'block';
+      } else {
+        counter.classList.remove('valid');
+        check.style.display = 'none';
+      }
+    }
+
+    function sendOrder() {
+      const imeiInput = document.getElementById('imeiInput');
+      const imeiVal = imeiInput.value.trim();
 
       if (!selectedPackage) {
-        alert('Tolong pilih salah satu paket terlebih dahulu!');
+        alert('Silakan pilih paket layanan terlebih dahulu.');
         return;
       }
-      if (!deviceId) {
-        alert('Tolong masukkan ID Perangkat Anda!');
-        document.getElementById('deviceId').focus();
+
+      if (!imeiVal || imeiVal.length < 14) {
+        alert('Mohon masukkan nomor IMEI 1 yang valid (15 digit). Ketik *#06# di keypad iPhone kamu untuk melihatnya.');
+        imeiInput.focus();
         return;
       }
 
       const phoneNumber = "6281217373971";
-      const message = `Halo Admin,%0A%0ASaya ingin memesan Layanan Khusus:%0A*Paket:* ${selectedPackage.name} (${selectedPackage.badge})%0A*Harga:* ${selectedPackage.price}%0A*ID Perangkat:* ${deviceId}%0A%0AMohon diproses, terima kasih.`;
+      const message = `Halo Admin iVenth Official,%0A%0ASaya ingin memesan *Layanan Khusus*:%0A• *Paket:* ${selectedPackage.name} (${selectedPackage.badge})%0A• *Harga:* ${selectedPackage.price}%0A• *IMEI 1 Perangkat:* ${imeiVal}%0A%0AMohon info rekening dan estimasi pengerjaannya. Terima kasih!`;
 
       const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
       window.open(waUrl, '_blank');
     }
 
-    renderCards();
+    // Initialize
+    renderPackages();
+    updateSummary();
   </script>
-</body>
 
+</body>
 </html>

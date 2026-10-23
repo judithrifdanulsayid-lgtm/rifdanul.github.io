@@ -1,131 +1,516 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>iVenth Official</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>iVenth Official — Rekomendasi iPhone Terpercaya & Bergaransi</title>
+  <meta name="description" content="Koleksi kurasi iPhone Bypass & Inter no simlock teraman, termurah, dan terpercaya. 100% dicek fisik & fungsi, bergaransi, transaksi aman via Shopee Star+." />
 
-  <link rel="stylesheet" href="style.css">
-
+  <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
-
-<a 
-  href="https://wa.me/6281217373971" 
-  class="floating-wa"
-  target="_blank"
->
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-    alt="WhatsApp"
-  >
-
-  <div class="wa-text">
-    <span>Chat Admin</span>
-    <small>iVenth Official</small>
-  </div>
-</a>
 <body>
 
-  <!-- POPUP -->
-  <div class="popup" id="popup">
-    <div class="popup-box">
+  <!-- AMBIENT APPLE LIGHTING -->
+  <div class="ambient-glow glow-top"></div>
+  <div class="ambient-glow glow-bottom"></div>
 
-      <h2>⚠ Buka di Browser Dulu</h2>
-
-      <p>
-        Agar tampilan lebih smooth & interaktif :
-        <br><br>
-        Klik titik tiga → pilih <b>Buka di Browser</b>
-      </p>
-
-      <div class="popup-images">
-        <img src="ss1.jpeg">
-        <img src="ss2.jpeg">
+  <!-- IN-APP BROWSER NOTIFICATION (SMART BANNER) -->
+  <div class="smart-banner" id="smartBanner">
+    <div class="smart-banner-content">
+      <div class="smart-banner-icon">💡</div>
+      <div class="smart-banner-text">
+        <strong>Tips Belanja Lancar:</strong> Buka di <b>Safari / Chrome</b> agar checkout Shopee & navigasi lebih mulus.
       </div>
-
-      <button onclick="closePopup()">
-        Masuk Website
-      </button>
-
+      <button class="smart-banner-action" onclick="openPopup()">Lihat Cara</button>
+      <button class="smart-banner-close" onclick="closeSmartBanner()" aria-label="Tutup">&times;</button>
     </div>
   </div>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">
-      <span class="blue">i</span>
-      <span>Venth</span>
-      <span class="purple">Official</span>
+  <!-- TOP TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <span>🛡️ 100% Unit Terverifikasi</span>
+      <span class="dot">•</span>
+      <span>⭐ 4.9/5 Rating Pembeli</span>
+      <span class="dot">•</span>
+      <span>📦 Transaksi Aman Shopee Star+</span>
+      <span class="dot">•</span>
+      <span>⚡ Support Admin Fast Response</span>
     </div>
+  </div>
 
-    <div class="menu">
-      <button class="active" onclick="filterCategory('all',this)">Semua</button>
-      <button onclick="filterCategory('Bypass',this)">Bypass</button>
-      <button onclick="filterCategory('Inter No Simlock',this)">Inter No Simlock</button>
-      <button onclick="filterCategory('Resmi',this)">Resmi</button>
+  <!-- STICKY APPLE NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <img src="logo.svg" alt="iVenth Official" class="brand-logo" />
+      </a>
+
+      <div class="nav-status">
+        <span class="status-indicator"></span>
+        <span class="status-text">Ready Stock & Garansi</span>
+      </div>
+
+      <div class="nav-actions">
+        <a href="layanan.html" class="nav-btn btn-secondary">
+          <span class="btn-icon">⚡</span>
+          <span class="btn-text">Layanan IMEI</span>
+        </a>
+        <a href="https://wa.me/6281217373971" target="_blank" rel="noopener noreferrer" class="nav-btn btn-primary">
+          <span class="wa-icon-mini"></span>
+          <span class="btn-text">Chat Admin</span>
+        </a>
+      </div>
     </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Kurasi iPhone Terlengkap & Bergaransi</span>
+        </div>
+
+        <h1 class="hero-title">
+          iPhone Impian.<br>
+          <span class="gradient-text">Kualitas Teruji. Harga Masuk Akal.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Rekomendasi iPhone Bypass & Inter pilihan tangan pertama. 100% dicek fisik & fungsi, bebas login iCloud pribadi, bergaransi toko, dan aman untuk harian, ngonten, live streaming hingga gaming.
+        </p>
+
+        <!-- CTA BUTTONS -->
+        <div class="hero-cta-group">
+          <a href="#katalog" class="cta-btn cta-primary">
+            <span>Jelajahi Rekomendasi</span>
+            <span class="arrow-icon">↓</span>
+          </a>
+          <a href="layanan.html" class="cta-btn cta-glass">
+            <span class="lightning-icon">⚡</span>
+            <span>Layanan Khusus Bypass & IMEI</span>
+          </a>
+        </div>
+
+        <!-- STATS & TRUST PILLS -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Unit Terjual Aman</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.9 ★</div>
+            <div class="stat-label">Kepuasan Pembeli</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">iCloud Bebas Login</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">Garansi</div>
+            <div class="stat-label">Support Teknisi Toko</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- HERO VISUAL -->
+      <div class="hero-visual">
+        <div class="device-card-mockup">
+          <div class="device-card-inner">
+            <img src="banner.png" alt="Rekomendasi iPhone iVenth" class="hero-banner-img" />
+          </div>
+          <div class="floating-chip chip-top">
+            <span class="chip-icon">✨</span>
+            <div class="chip-text">
+              <strong>Fisik 98-99% Mulus</strong>
+              <small>Layar & Kamera Jernih</small>
+            </div>
+          </div>
+          <div class="floating-chip chip-bottom">
+            <span class="chip-icon">🛡️</span>
+            <div class="chip-text">
+              <strong>Shopee Star+ Verified</strong>
+              <small>Rekber Aman 100%</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSPARENT GUIDE: EDUKASI MEMBELI (BUILDS TRUST) -->
+    <section class="guide-section">
+      <div class="section-header">
+        <div class="section-tag">PANDUAN TRANSPARAN</div>
+        <h2 class="section-title">Kenali Jenis iPhone Sebelum Membeli</h2>
+        <p class="section-desc">Kami transparan 100% agar Anda mendapatkan unit sesuai kebutuhan & budget tanpa rasa was-was.</p>
+      </div>
+
+      <div class="guide-grid">
+        <!-- BYPASS CARD -->
+        <div class="guide-card">
+          <div class="guide-badge badge-blue">Paling Hemat & Populer</div>
+          <h3>iPhone Bypass</h3>
+          <p class="guide-summary">iPhone original dengan bypass sistem. Sangat ideal untuk penggunaan WiFi-only.</p>
+          <ul class="guide-features">
+            <li><span class="check">✓</span> <b>Bebas Login:</b> iCloud & App Store milik pribadi</li>
+            <li><span class="check">✓</span> <b>Fungsi Normal:</b> Kamera tajam, display retina, speaker, Face ID</li>
+            <li><span class="check">✓</span> <b>Cocok Untuk:</b> Ngonten, gaming, sosmed, live TikTok/Shopee</li>
+            <li><span class="info">ℹ</span> <b>Catatan:</b> Khusus koneksi WiFi / Hotspot, jangan di-reset pabrik</li>
+          </ul>
+          <div class="guide-bottom">
+            <span class="guide-price-tag">Mulai Rp 2 Jutaan</span>
+          </div>
+        </div>
+
+        <!-- INTER NO SIMLOCK CARD -->
+        <div class="guide-card highlight-card">
+          <div class="guide-badge badge-gold">⭐ Rekomendasi Bebas Sinyal</div>
+          <h3>Inter No Simlock</h3>
+          <p class="guide-summary">iPhone eks internasional tanpa kunci operator luar. Siap pakai simcard Indonesia.</p>
+          <ul class="guide-features">
+            <li><span class="check">✓</span> <b>All Operator:</b> Telkomsel, XL, Indosat, Smartfren, Tri</li>
+            <li><span class="check">✓</span> <b>Bebas Reset & Update:</b> Normal layaknya iPhone baru</li>
+            <li><span class="check">✓</span> <b>Kualitas Mulus:</b> Battery Health 90-100%, LCD original</li>
+            <li><span class="check">✓</span> <b>Garansi Unit:</b> Dukungan penuh dari toko terverifikasi</li>
+          </ul>
+          <div class="guide-bottom">
+            <span class="guide-price-tag">Mulai Rp 5 Jutaan</span>
+          </div>
+        </div>
+
+        <!-- RESMI INDONESIA CARD -->
+        <div class="guide-card">
+          <div class="guide-badge badge-green">Resmi Indonesia</div>
+          <h3>Resmi iBox / GDN</h3>
+          <p class="guide-summary">Unit resmi distribusi Indonesia dengan nomor seri PA/A atau ID/A.</p>
+          <ul class="guide-features">
+            <li><span class="check">✓</span> <b>IMEI Kemenperin:</b> Terdaftar seumur hidup aman</li>
+            <li><span class="check">✓</span> <b>All Operator:</b> Jaringan 4G/5G permanen bebas khawatir</li>
+            <li><span class="check">✓</span> <b>Kondisi Mulus:</b> Lengkap dengan kotak & aksesoris</li>
+            <li><span class="check">✓</span> <b>Garansi Resmi:</b> Layanan service center resmi</li>
+          </ul>
+          <div class="guide-bottom">
+            <span class="guide-price-tag">Sesuai Ketersediaan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOG / PRODUCTS SECTION -->
+    <section class="catalog-section" id="katalog">
+      <div class="section-header">
+        <div class="section-tag">KATALOG PILIHAN</div>
+        <h2 class="section-title">Koleksi iPhone Rekomendasi Teruji</h2>
+        <p class="section-desc">Pilih kategori yang sesuai, klik produk untuk cek foto detail & langsung checkout di Shopee Star+.</p>
+      </div>
+
+      <!-- FILTER & VIEW CONTROLS -->
+      <div class="catalog-toolbar">
+        <!-- Horizontal Scrollable Category Pills -->
+        <div class="category-pills" id="categoryMenu">
+          <button class="cat-pill active" onclick="filterCategory('all', this)">
+            <span>Semua</span>
+            <span class="cat-count" id="count-all">11</span>
+          </button>
+          <button class="cat-pill" onclick="filterCategory('Bypass', this)">
+            <span>Bypass</span>
+            <span class="cat-count" id="count-bypass">7</span>
+          </button>
+          <button class="cat-pill" onclick="filterCategory('Inter No Simlock', this)">
+            <span>Inter No Simlock</span>
+            <span class="cat-count" id="count-inter">4</span>
+          </button>
+          <button class="cat-pill" onclick="filterCategory('Resmi', this)">
+            <span>Resmi</span>
+            <span class="cat-count" id="count-resmi">0</span>
+          </button>
+        </div>
+
+        <!-- Mobile View Toggle & Search -->
+        <div class="toolbar-actions">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Cari tipe iPhone..." oninput="handleSearch(this.value)" />
+          </div>
+          <button class="view-toggle-btn" id="viewToggleBtn" onclick="toggleGridView()" aria-label="Ganti Tampilan Grid">
+            <span id="viewToggleIcon">⊞</span>
+            <span class="view-toggle-label" id="viewToggleLabel">2 Kolom</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- PRODUCTS CONTAINER -->
+      <div class="products-grid grid-2-col" id="productContainer">
+        <!-- Injected via script.js -->
+      </div>
+
+      <!-- NO RESULTS PLACEHOLDER -->
+      <div class="no-results" id="noResults" style="display: none;">
+        <div class="no-results-icon">🔍</div>
+        <h3>Tipe iPhone Tidak Ditemukan</h3>
+        <p>Coba kata kunci lain atau hubungi admin langsung untuk request unit.</p>
+        <button class="cta-btn cta-primary" onclick="resetFilters()">Reset Pencarian</button>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / PROOF OF TRUST -->
+    <section class="testimonials-section">
+      <div class="section-header">
+        <div class="section-tag">TESTIMONI PEMBELI</div>
+        <h2 class="section-title">Apa Kata Mereka yang Sudah Order?</h2>
+        <p class="section-desc">Ratusan unit telah sampai dengan selamat dan pembeli puas dengan performanya.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar">R</div>
+            <div class="testi-info">
+              <h4>Rian Pratama</h4>
+              <small>Jakarta • Beli iPhone 15 Pro Bypass</small>
+            </div>
+            <div class="testi-badge">✓ Terverifikasi</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">
+            "Awalnya ragu beli bypass, tapi setelah konsultasi sama admin iVenth dijelasin detail dan transparan. Barangnya mulus banget 99%, Face ID aman, kamera jernih gila buat live streaming. Mantap!"
+          </p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar">D</div>
+            <div class="testi-info">
+              <h4>Dimas Anggoro</h4>
+              <small>Surabaya • Beli iPhone 14 Pro Max Inter</small>
+            </div>
+            <div class="testi-badge">✓ Terverifikasi</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">
+            "Inter All Op beneran sinyal aman colok Telkomsel langsung ON. Battery Health dapet 98%, LCD ori tanpa notif. Packing kayu super tebal. Rekomendasi parah!"
+          </p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar">S</div>
+            <div class="testi-info">
+              <h4>Sarah Amalia</h4>
+              <small>Bandung • Beli iPhone 13 Bypass</small>
+            </div>
+            <div class="testi-badge">✓ Terverifikasi</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">
+            "Harga paling masuk akal se-Shopee. Buat ngonten video TikTok dan reels Instagram lancar jaya, warna midnight elegan banget. Adminnya fast response pas ditanya panduannya."
+          </p>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-header">
+            <div class="testi-avatar">F</div>
+            <div class="testi-info">
+              <h4>Fajar Nugraha</h4>
+              <small>Yogyakarta • Beli iPhone 11 Bypass</small>
+            </div>
+            <div class="testi-badge">✓ Terverifikasi</div>
+          </div>
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">
+            "Unit kedua yang saya order disini. Buat adik sekolah dan gaming lancar banget. Toko amanah dan link shopee-nya beneran toko star+ terpercaya."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+      <div class="section-header">
+        <div class="section-tag">FAQ</div>
+        <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+        <p class="section-desc">Jawaban lengkap dan transparan seputar pembelian dan pemakaian unit.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>Apakah iPhone Bypass aman untuk pemakaian harian?</span>
+            <span class="faq-arrow">↓</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Sangat aman! Anda bebas login akun iCloud pribadi Anda sendiri, download ribuan aplikasi di App Store resmi, update aplikasi normal, dan menggunakan kamera/layar/speaker tanpa kendala. Syaratnya cukup sambungkan ke jaringan WiFi / Hotspot dan jangan melakukan reset pabrik (Erase All Content).</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Bagaimana jaminan keamanan transaksinya?</span>
+            <span class="faq-arrow">↓</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Semua link produk kami terhubung langsung ke official store & seller berpredikat <b>Shopee Star+ / Mall</b> dengan sistem Rekening Bersama Shopee. Uang Anda 100% aman dan hanya diteruskan ke penjual setelah paket Anda terima dan Anda konfirmasi dalam keadaan sesuai.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Apakah ada garansi jika unit bermasalah saat tiba?</span>
+            <span class="faq-arrow">↓</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Pasti ada! Tersedia garansi retur/tukar unit sesuai ketentuan toko di Shopee jika terjadi kendala fungsional pada saat unboxing. Pastikan Anda merekam video unboxing lengkap tanpa jeda untuk proses klaim yang cepat dan dibantu oleh admin.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Apa bedanya Inter No Simlock dengan Bypass?</span>
+            <span class="faq-arrow">↓</span>
+          </summary>
+          <div class="faq-answer">
+            <p><b>Inter No Simlock</b> bisa menggunakan kartu SIM seluler Indonesia (All Operator) dan bebas di-reset maupun update iOS. Sedangkan <b>Bypass</b> difokuskan untuk koneksi internet via WiFi / Hotspot dengan harga yang jauh lebih hemat hingga 50-70% lebih murah.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Apa itu Layanan Khusus di iVenth Official?</span>
+            <span class="faq-arrow">↓</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Layanan Khusus adalah jasa profesional untuk penanganan IMEI, aktivasi bypass, dan optimasi perangkat iPhone Anda dengan proses kilat 1-2 jam dan dikerjakan oleh teknisi ahli bergaransi.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="logo.svg" alt="iVenth Official" class="footer-logo" />
+          <p>Destinasi rekomendasi iPhone bypass & inter paling aman, transparan, dan terpercaya di Indonesia.</p>
+        </div>
+        <div class="footer-badges">
+          <div class="security-badge">
+            <span class="badge-icon">🔒</span>
+            <div class="badge-text">
+              <strong>100% Verified Links</strong>
+              <small>Aman via Shopee Star+</small>
+            </div>
+          </div>
+          <div class="security-badge">
+            <span class="badge-icon">🛡️</span>
+            <div class="badge-text">
+              <strong>Garansi Toko Resmi</strong>
+              <small>Layanan Teknisi Standby</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 iVenth Official (iventh.my.id). All rights reserved.</p>
+        <div class="footer-links">
+          <a href="layanan.html">Layanan Khusus</a>
+          <span>•</span>
+          <a href="https://wa.me/6281217373971" target="_blank" rel="noopener noreferrer">Bantuan WhatsApp</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- MOBILE NATIVE BOTTOM NAVIGATION BAR -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav">
+    <a href="#katalog" class="bottom-nav-item active" onclick="setActiveNav(this)">
+      <span class="nav-icon">📱</span>
+      <span class="nav-label">Katalog</span>
+    </a>
+    <a href="layanan.html" class="bottom-nav-item">
+      <span class="nav-icon">⚡</span>
+      <span class="nav-label">Layanan</span>
+    </a>
+    <a href="#panduan" class="bottom-nav-item" onclick="scrollToGuide(event)">
+      <span class="nav-icon">🛡️</span>
+      <span class="nav-label">Panduan</span>
+    </a>
+    <a href="https://wa.me/6281217373971" target="_blank" rel="noopener noreferrer" class="bottom-nav-item nav-wa-highlight">
+      <span class="nav-icon wa-bubble">💬</span>
+      <span class="nav-label">Admin WA</span>
+      <span class="nav-ping"></span>
+    </a>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- DESKTOP FLOATING WHATSAPP -->
+  <a href="https://wa.me/6281217373971" class="floating-wa" target="_blank" rel="noopener noreferrer">
+    <div class="wa-avatar-box">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp iVenth" />
+      <span class="wa-online-dot"></span>
+    </div>
+    <div class="wa-text">
+      <span>Chat Admin Teknisi</span>
+      <small>Online • Balas Cepat</small>
+    </div>
+  </a>
 
-    <div class="hero-text">
-      <h1>
-        iPhone <span>Trusted</span><br>
-        Recommendation
-      </h1>
-
-      <p>
-        Highlight rekomendasi iPhone bypass aman, termurah,
-        bergaransi, cocok buat harian, ngonten, live,
-        gaming & dijual kembali.
-      </p>
-
-      <div class="hero-alert">
-        ✅ Sudah order beberapa kali dan pemakaian lama aman bergaransi.
-      </div>
+  <!-- BROWSER GUIDE ALERT MODAL (PAS BUKA WEB) -->
+  <div class="modal-overlay" id="popupModal" onclick="closePopup()">
+    <div class="modal-dialog" onclick="event.stopPropagation()">
+      <div class="modal-handle"></div>
+      <button class="modal-close-x" onclick="closePopup()" aria-label="Tutup">&times;</button>
       
-      <div style="margin-top: 25px; animation: glowPulse 2.5s infinite;">
-        <button onclick="window.location.href='layanan.html'" style="background: linear-gradient(135deg, #0f172a, #1e293b); color: #f8fafc; padding: 15px 30px; border-radius: 12px; font-size: 16px; font-weight: 700; border: 1px solid rgba(255, 215, 0, 0.4); cursor: pointer; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); display: flex; align-items: center; gap: 10px; width: 100%; justify-content: center; text-transform: uppercase; letter-spacing: 1.5px; transition: all 0.3s ease;">
-          <span style="color: #fbbf24;">⚡</span>
-          <span>Layanan Khusus (Cepat & Profesional)</span>
+      <div class="modal-header">
+        <div class="modal-badge">⚠️ PERHATIAN PENGUNJUNG</div>
+        <h3>Harap Buka di Browser HP Dulu</h3>
+        <p>Agar tampilan lebih smooth, interaktif, dan link checkout Shopee langsung membuka aplikasi Shopee di HP Anda:</p>
+      </div>
+
+      <div class="modal-guide-images">
+        <div class="guide-img-card">
+          <img src="ss1.jpeg" alt="Langkah 1: Klik titik tiga di pojok atas" />
+          <span><b>Langkah 1:</b> Klik titik tiga (•••) di pojok atas layar</span>
+        </div>
+        <div class="guide-img-card">
+          <img src="ss2.jpeg" alt="Langkah 2: Pilih Buka di Browser" />
+          <span><b>Langkah 2:</b> Pilih <b>"Buka di Browser"</b> (Safari / Chrome)</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="cta-btn cta-primary" onclick="closePopup()">
+          <span>Saya Mengerti, Lanjutkan ke Web</span>
+          <span>→</span>
         </button>
       </div>
-      <style>
-        @keyframes glowPulse {
-          0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.3); transform: scale(1); }
-          50% { box-shadow: 0 0 0 10px rgba(251, 191, 36, 0); transform: scale(1.02); }
-          100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); transform: scale(1); }
-        }
-      </style>
     </div>
+  </div>
 
-    <div class="hero-image">
-      <img src="banner.png">
+  <!-- FULLSCREEN IMAGE VIEWER MODAL -->
+  <div class="image-modal" id="imageModal" onclick="closeImage()">
+    <div class="image-modal-backdrop"></div>
+    <div class="image-modal-content" onclick="event.stopPropagation()">
+      <button class="close-modal-btn" onclick="closeImage()" aria-label="Tutup Preview">&times;</button>
+      <img id="modalImage" alt="Preview iPhone iVenth" />
+      <div class="image-modal-caption" id="modalCaption">Klik di luar untuk menutup</div>
     </div>
-
-  </section>
-
-  <!-- PRODUCTS -->
-  <section class="catalog">
-
-    <div class="products" id="productContainer">
-
-      <!-- PRODUCTS JS -->
-
-    </div>
-
-  </section>
-
-  <!-- IMAGE MODAL -->
-  <div class="image-modal" id="imageModal">
-    <span class="close-modal" onclick="closeImage()">&times;</span>
-    <img id="modalImage">
   </div>
 
   <script src="script.js"></script>
