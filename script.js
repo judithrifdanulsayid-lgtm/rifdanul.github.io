@@ -3,6 +3,27 @@
 // 1. DATA PRODUK DENGAN DETAIL LENGKAP & SPECS
 const products = [
   {
+    id: 0,
+    name: "iPhone 15 Pro Max",
+    category: "Bypass",
+    price: "Rp 5,7 Juta",
+    badge: "🔥 Paling Diminati",
+    isSpecial: true,
+    specs: ["Titanium Frame", "Face ID ON", "Action Button", "A17 Pro", "iCloud Bebas"],
+    description: "iPhone 15 Pro Max bypass paling banyak diminati! Layar Super Retina XDR 6.7\" luas, kamera periskop 5x optical zoom terbaik, bodi titanium ringan & premium. Cocok untuk konten kreator, live streaming, dan gaming berat bergaransi toko.",
+    links: [
+      {
+        title: "Beli di Shopee ↗",
+        url: "https://s.shopee.co.id/7AehfZJb0t"
+      }
+    ],
+    images: [
+      "https://i0.wp.com/thedisconnekt.com/wp-content/uploads/2024/02/Apple-iPhone-15-Pro-Max-2.jpg?w=1600&ssl=1",
+      "https://i0.wp.com/thedisconnekt.com/wp-content/uploads/2024/02/Apple-iPhone-15-Pro-Max-20.jpg?resize=1200%2C800&ssl=1",
+      "https://i0.wp.com/thedisconnekt.com/wp-content/uploads/2024/02/Apple-iPhone-15-Pro-Max-4-1.jpg?resize=1200%2C800&ssl=1"
+    ]
+  },
+  {
     id: 1,
     name: "iPhone 15 Pro",
     category: "Bypass",
