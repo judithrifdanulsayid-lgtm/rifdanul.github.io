@@ -49,7 +49,7 @@ const products = [
     id: 2,
     name: "iPhone 14 Pro & 14 Promax",
     category: "Bypass",
-    price: "Rp 4 Juta",
+    price: "Rp 3.5 - 4 Juta",
     badge: "Premium Pro",
     isSpecial: true,
     specs: ["Dynamic Island", "Face ID ON", "48MP Kamera", "120Hz ProMotion", "Garansi Toko"],
