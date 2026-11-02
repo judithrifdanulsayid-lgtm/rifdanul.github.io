@@ -14,7 +14,7 @@ const products = [
     links: [
       {
         title: "Beli di Shopee ↗",
-        url: "https://s.shopee.co.id/7AehfZJb0t"
+        url: "https://s.shopee.co.id/6L5h4U5xZd"
       }
     ],
     images: [
