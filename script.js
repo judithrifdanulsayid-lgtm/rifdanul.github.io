@@ -91,11 +91,11 @@ const products = [
       }
     ],
     images: [
-      "https://borneostore.co.id/wp-content/uploads/2022/08/11-yellow.webp",
-      "https://borneostore.co.id/wp-content/uploads/2022/08/11-putih.jpg",
-      "https://borneostore.co.id/wp-content/uploads/2022/08/11-black.jpg",
-      "https://borneostore.co.id/wp-content/uploads/2022/08/11-ungu.jpg",
-      "https://borneostore.co.id/wp-content/uploads/2022/08/11-merah.jpg"
+      "https://down-id.img.susercontent.com/file/sg-11134201-81ztx-mmr4hrd6z28645.webp",
+      "https://down-id.img.susercontent.com/file/sg-11134201-81zu6-mmr4hm5za22t28.webp",
+      "https://down-id.img.susercontent.com/file/sg-11134201-81zw3-mmr4hmyuaupsf4.webp",
+      "https://down-id.img.susercontent.com/file/sg-11134201-81zu5-mmr4hnnid05h13.webp",
+      "https://down-id.img.susercontent.com/file/sg-11134201-81ztx-mmr4hoicv6rkeb.webp"
     ]
   },
   {
