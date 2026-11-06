@@ -87,7 +87,7 @@ const products = [
     links: [
       {
         title: "Beli di Shopee ↗",
-        url: "https://s.shopee.co.id/9Kf1ouIsqe"
+        url: "https://s.shopee.co.id/2gCUhi4wqg"
       }
     ],
     images: [
@@ -131,7 +131,7 @@ const products = [
     links: [
       {
         title: "Beli di Shopee ↗",
-        url: "https://s.shopee.co.id/5fmi0FpwRy"
+        url: "https://s.shopee.co.id/LoZujZwZf"
       }
     ],
     images: [
@@ -174,7 +174,7 @@ const products = [
     links: [
       {
         title: "Beli di Shopee ↗",
-        url: "https://s.shopee.co.id/9zuicDnO0X"
+        url: "https://s.shopee.co.id/5q9WT4e0kE"
       }
     ],
     images: [
